@@ -12,7 +12,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@NoArgsConstructor @AllArgsConstructor @Data
 public class Etudiant {
 		@Id
 		private Long idEtudiant;
