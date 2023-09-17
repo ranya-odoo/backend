@@ -22,7 +22,7 @@ EtudiantRepository etdRepository;
 	public static void main(String[] args) {
 		SpringApplication.run(ApiEtudiantApplication.class, args);
 	}
-	//@Bean
+	@Bean
 	CommandLineRunner start() {
 		return args -> {
 			

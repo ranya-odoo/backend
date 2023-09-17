@@ -19,11 +19,11 @@ import sesame.com.repositories.EtudiantRepository;
 
 @CrossOrigin
 @RestController
-@RequestMapping("/")
+@RequestMapping("/etudiant")
 public class EtudiantRestController {
 @Autowired
 private EtudiantRepository etdRep;
-@GetMapping(path="/ListeEtudiants",produces= {MediaType.APPLICATION_JSON_VALUE})
+@GetMapping(path="/liste",produces= {MediaType.APPLICATION_JSON_VALUE})
 public List<Etudiant> CompteList(){
 return etdRep.findAll();
 }

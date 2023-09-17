@@ -55,6 +55,7 @@ public class Etudiant {
 			this.prenomEtudiant = prenomEtudiant;
 			this.dateNais = dateNais;
 		}
+
 	
 
 }
