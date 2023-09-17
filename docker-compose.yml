@@ -1,6 +1,6 @@
 services:
   app: 
-    image: backend
+    image: malbouz/backend:1.1.0
     build:
       context: .
     container_name: backend
