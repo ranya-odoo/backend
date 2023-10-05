@@ -14,13 +14,6 @@ pipeline {
                 sh "git clone https://github.com/MaBouz/backend.git"
             }
         }
-        stage ("Generate frontend image") {
-            steps {
-                 dir("backend"){
-                    sh "docker build -t angular-app ."
-                }                
-            }
-        }
         stage ("Generate backend image") {
               steps {
                    dir("backend"){
