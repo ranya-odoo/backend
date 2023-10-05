@@ -1,6 +1,5 @@
-FROM openjdk:11
+FROM adoptopenjdk:11-jre-hotspot
 VOLUME /tmp
+ADD target/*.jar app.jar
+CMD ["java", "-jar", "app.jar", "--spring.profiles.active=prod"]
 EXPOSE 8091
-ARG JAR_FILE=target/demo-0.0.1.jar
-ADD ${JAR_FILE} app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
