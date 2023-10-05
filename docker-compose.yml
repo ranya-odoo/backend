@@ -1,23 +1,16 @@
 services:
-
-
-
-      
+    
   # Spring Boot Application
   spring-boot-app:
     image: backend
     ports:
-      - "0.0.0.0:8085:8091"
+      - "0.0.0.0:8091:8091"
     environment:
       - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/api_etudiant
       - SPRING_DATASOURCE_USERNAME=root
       - SPRING_DATASOURCE_PASSWORD=root
       - SPRING_DATASOURCE_DRIVER_CLASS_NAME=com.mysql.cj.jdbc.Driver
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
-      - SPRING_MVC_CORS_MAPPING=/**
-      - SPRING_MVC_CORS_ALLOWED_ORIGINS=http://localhost:4200
-      - SPRING_MVC_CORS_ALLOWED_METHODS=GET,POST,PUT,DELETE
-      - SPRING_MVC_CORS_ALLOWED_HEADERS=*
     depends_on:
       - mysql
 
